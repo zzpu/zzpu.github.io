@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+      .header{
+             background-color:antiquewhite;
+              height: 97px; /* 设置固定高度 */
+             text-align: left;
+             border-radius: 0 0 15px 15px;
+             float: left;
+             width: 100%;
+            }
+            .header img{
+                height: 97px; /* 设置固定高度 */
+                border-radius: 0 0 15px 15px;
+                margin-bottom: 1px;
+                float: left;
+            }
+            .cd{
+        width: 120px;
+        height: 90px;
+        background-color: antiquewhite;
+        text-align: center;
+        border-radius: 15px;
+        float: right;
+        margin-top: 5px;
+        margin-right: 35px;
+        font-size: 40px;
+        cursor: pointer;
+        }
+        .ys{
+            display: none; /* Initially hidden */
+            width: 200px;
+            list-style: none;
+            padding: 0;
+            float: right;
+            background-color:#ffde76;
+            border-radius: 15px;
+            height: 250px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 15px;
+            margin-top: 30px;
+        }
+        .cd:hover .ys {
+            display: block; /* Show on hover */
+        }
+        .search {
+          display: flex;
+          width: 50%;
+          height: 50px; /* 调整高度以适应按钮和输入框 */
+          background-color: #333333;
+          border-radius: 30px;
+          margin-top: 180px;
+          margin-left: 380px;
+          padding: 10px;
+          box-sizing: border-box;
+          align-items: center; /* 垂直居中对齐 */
+          justify-content: space-between; /* 按钮和输入框之间的间距 */
+        }
+
+        .search-input {
+          flex-grow: 1;
+          padding: 5px; /* 填充以确保有足够的空间输入 */
+          border: 0px solid #666666;
+          border-radius: 15px;
+          outline: none;
+          color: #ffffff;
+          margin-right: 10px; /* 与按钮的间距 */
+        }
+
+        .search-button {
+          padding: 5px 15px; /* 填充以确保按钮有足够的大小 */
+          margin-left: 10px;
+          border: none;
+          border-radius: 25px;
+          background-color: #666666;
+          color: #ffffff;
+          cursor: pointer;
+        }
+
+         .container {
+            background-color: #FFDE76;
+            width: 1000px;
+            height: 700px;
+            display: flex;
+            position: relative;
+            margin-left: 310px;
+            margin-top: 50px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        /* 导航栏 */
+        .nav {
+            background-color: #333;
+            color: #fff;
+            padding: px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000px;
+            border-radius:15px 15px 0 0;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 左侧盒子 */
+        .left-box {
+            background-color: #fff; /* 根据需要更改 */
+            width: 400px;
+            height: 600px;
+            margin: 70px 10px 50px 50px; /* 上 右 下 左 */
+            border-radius: 15px;
+            overflow: auto; /* 如果内容溢出，显示滚动条 */
+        }
+
+        /* 右侧盒子 */
+        .right-box {
+            background-color: #fff; /* 根据需要更改 */
+            width: 400px;
+            height: 600px;
+            margin: 75px 50px 50px 50px; /* 上 右 下 左 */
+            border-radius: 15px;
+            overflow: hidden; /* 隐藏溢出的内容 */
+        }
+
+        /* 列表样式 */
+        .list {
+            padding: 20px;
+            background-color:beige;
+            border-radius: 15px 15px 15px 15px;
+        }
+
+        .list a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 50px;
+            padding: 0;
+            margin-bottom: 20px;
+
+        }
+        a{
+            text-decoration: none;
+            ;
+        }
+        a:hover{
+            color: #800;
+        }
+
+        /* 图片和形状的容器 */
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        /* 形状样式 */
+        .shape {
+            text-align: center;
+
+            /* 形状样式根据需要添加 */
+        }
+        .xinxi{
+            font-size: smaller;
+            font-weight: 100;
+        }
+        .tm{
+            text-align: center;
+        }
+
+        .footer{
+            padding: 20px;
+            text-align: center;
+            background-color: #ffde76;
+            margin-top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="cd">菜单
+            <div class="ys">
+                <a href="学生天地.html">学生天地</a>
+                <br>
+                <a href="学院信息.html">学院信息</a>
+                <br>
+                <a href="教师成果.html">教师成果</a>
+                <br>
+                <a href="招生就业.html">招生就业</a>
+                <br>
+                <a href="资源中心.html">资源中心</a>
+                <br>
+                <a href="main.html">返回首页</a>
+            </div>
+        </div>
+        <p><img src="94aca462af2d37d6653d1170f0bd7a6f.png"></p>
+
+     </div>
+
+     <div class="search">
+        <input type="text" class="search-input" placeholder="搜索...">
+        <button type="button" class="search-button">搜索</button>
+    </div>
+
+    <div class="container">
+        <!-- 导航栏 -->
+        <div class="nav">
+            <div class="now">
+                <a href="">当前位置：首页/每日热点</a>
+            </div>
+            <a href="main.html">返回首页</a>
+        </div>
+        <!-- 左侧盒子 -->
+        <div class="left-box">
+            <ul class="list">
+                <li><a href="#">新华网|第二届“汉语桥”故事...</a></li>
+                <li><a href="#">浙江广电报刊总社|杭州电子科...</a></li>
+                <li><a href="#">浙江教育报|在企业需求中找到...</a></li>
+                <li><a href="#">杭州日报|杭电年货节 论文篇...</a></li>
+                <li><a href="#">浙江教育报|做强做优人才队伍...</a></li>
+                <!-- 更多链接 -->
+
+            </ul>
+        </div>
+        <!-- 右侧盒子 -->
+        <div class="right-box">
+            <div class="content">
+                <img src="jzbx47vk.png" alt="相关图片">
+                <div class="tm"><h4>浙江日报|春招求职忙 AI来帮忙</h4></div>
+                <div class="xinxi"><h6>作者：纪驭亚 程振伟等 编辑：刘璐 来源：浙江日报 时间：2024-03-28 点击量：539</h6></div>
+                <div class="shape">
+                    <p>又是一年大学春招进行时。每天打开学校一站式就业服务系统的个人后台，查看是否有精准推送的招聘岗位，已成为杭州电子科技大学人工智能学院自动化专业大四学生小龙的新习惯。
+
+                        “在学校一站式就业服务系统填写清楚自己的求职需求后，系统会精准匹配可应聘的新岗位。”小龙说，因为近期还忙于写毕业论文，学校的服务让他节约了不少在网上海淘招聘岗位的时间和精力。
+
+                        一站式就业服务系统是杭电刚推出的暖心就业服务。除了联手就业桥为毕业生提供万余个就业岗位并精准匹配体外，该系统还依托百度文心一言AI大模型等，提供AI简历修改、AI模拟面试和笔试，以及求职、考公考编课程等。杭电就业指导中心副主任叶琛琰介绍，相比于秋招，春招的招聘岗位数量相对少。但还有不少因为考研错过秋招的学生，迫切希望在春招期间找到工作。打造一站式就业服务系统的初衷，即助力毕业生提升个人就业竞争力、促进毕业生与用人单位的有效对接。
+
+                        26日下午，正在等待心仪岗位面试机会的小龙先尝试了AI面试。……</p>
+                    <!-- 更多内容 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h6>Copyright 杭州电子科技大学 人文艺术与数字媒体学院版权所有. All rights reserved
+
+            学院电话：0571-86878505 学院邮箱：xwcb@hdu.edu.cn</h6></div>
+</body>
+</html>
